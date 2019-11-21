@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Text, Dimensions, StyleSheet } from "react-native";
+import { Text, Dimensions, StyleSheet, Picker } from "react-native";
 import { View, CardItem, Body, Item, Input } from "native-base";
 import Modal from "react-native-modalbox";
 import Button from "react-native-button";
@@ -13,7 +13,7 @@ export default class Games extends Component {
       itemType: "",
       weightLimit: "1",
       storeUser: "",
-      weightArray: []
+      GamesArray: []
     };
   }
 
@@ -35,14 +35,14 @@ export default class Games extends Component {
         style={styles.modal}
       >
         <View>
-          <Text style={styles.titulo}>Agregar Medición</Text>
+          <Text style={styles.titulo}>Juegos</Text>
           <CardItem bordered>
             <Body>
               <Item inlineLabel>
                 <FontAwesome name="barcode" size={20}></FontAwesome>
                 <Input
                   keyboardType="numeric"
-                  placeholder="Código del Dispositivo"
+                  placeholder="Juego"
                   onChangeText={text => this.setState({ idWeight: text })}
                   value={this.state.idWeight}
                 />
@@ -50,7 +50,7 @@ export default class Games extends Component {
               <Item inlineLabel>
                 <FontAwesome name="balance-scale" size={20}></FontAwesome>
                 <Input
-                  placeholder="Producto medición"
+                  placeholder="Numero"
                   onChangeText={text => this.setState({ itemType: text })}
                   value={this.state.itemType}
                 />
@@ -62,7 +62,7 @@ export default class Games extends Component {
                 ></MaterialCommunityIcons>
                 <Input
                   onChangeText={text => this.setState({ weightLimit: text })}
-                  placeholder="Peso mínimo"
+                  placeholder="Monto"
                   //value={this.state.weightLimit}
                 />
               </Item>

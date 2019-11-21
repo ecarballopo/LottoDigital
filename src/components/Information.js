@@ -9,17 +9,17 @@ class Information extends React.Component {
         <View
           style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
         >
-          <Text>First!</Text>
+          <Text>Bienvenido a Lotto!</Text>
         </View>
         <View
           style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
         >
-          <Text>Second!</Text>
+          <Text>Encuentre diversos juegos!</Text>
         </View>
         <View
           style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
         >
-          <Text>Third!</Text>
+          <Text>Gracias por descargar nuestra aplicación!</Text>
           <Button
             title="Continuar"
             onPress={() => this.props.navigation.navigate("Login")}
